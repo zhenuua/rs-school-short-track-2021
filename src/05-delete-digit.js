@@ -9,7 +9,7 @@
  * For n = 152, the output should be 52
  *
  */
- function deleteDigit(n) {
+function deleteDigit(n) {
   if (!(typeof n === 'number')) {
     throw new Error('Not implemented');
   }
