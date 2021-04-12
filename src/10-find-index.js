@@ -15,18 +15,19 @@ function findIndex(array, value) {
   if (!Array.isArray(array)) {
     throw new Error('Not implemented');
   }
-  if (array.indexOf(value) === -1) {
-    return false;
-  }
-  for (let i = 0; i < array.length; i++) {
+
+  /* for (let i = 0; i < array.length; i++) {
     if (!(typeof array[i] === 'number')) {
       return false;
     }
-  }
+  } */
 
   array.sort((a, b) => a - b);
-
-  return array.indexOf(value);
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] === value) {
+      return j;
+    }
+  }
+  return false;
 }
-
 module.exports = findIndex;
